@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Playfair+Display&family=Quicksand&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.bt-0{
+    border-top: 3px solid black;
+}
+
+.bb-0{
+    border-bottom: 3px solid black;
+}
+
+.br-0{
+    border-right: 3px solid black;
+}
+
+.bl-0{
+    border-left: 3px solid black;
+}
+
+nav{
+    height: 8vh;
+    background-color: rgb(31, 1, 31);
+    color: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vh;
+}
+
+nav ul{
+    list-style: none;
+    
+}
+
+.gamecontainer{
+    width: 86vw;
+    display: flex;
+    justify-content: center;
+    /* background-color: yellow; */
+    margin: 0vw 2vw;
+    padding: 2vw 5vw;
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+.container{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    position: relative;
+}
+
+.gameInfo{
+    width: 100%;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    font-size: 5vw;
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px black;
+}
+
+.box:hover{
+    background-color: rgb(229, 207, 249);
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.info{
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.gameInfo h1{
+    font-size: 2.5vw;
+    text-shadow: 5px 5px 10px black;
+    margin: 2vw;
+}
+
+#reset{
+    width: 10vw;
+    height: 4vw;
+    font-size: 2vw;
+    font-weight: bolder;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    /* margin: 1vw 6vw; */
+    background-color: #dfc6df;
+}
+
+.turns{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.line{
+    position: absolute;
+    width: 0;
+    transition: width 1s ease-in-out;
+    height: 5px;
+    background: black;
+    background-color: rgb(189, 131, 244);
+}
+
+@media screen and (max-width: 900px)
+{
+    .gamecontainer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container{
+        width: 50vw;
+        height: 50vw;
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: repeat(3,auto);
+    }
+
+    #reset{
+        width: 21vw;
+        height: 8vw;
+        font-size: 4vw;
+    }
+    .gameInfo h1{
+        display: none;
+    }
+
+    .info{
+        font-size: 6vw;
+        font-weight: bolder;
+        text-shadow: 5px 5px 10px black;
+    }
+
+    .line{
+        display: none;
+    }
+}
